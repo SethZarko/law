@@ -1,9 +1,16 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/dist/index.html"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "client/dist/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/client/dist/index.html"
+    }
+  ]
+}
   
