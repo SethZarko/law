@@ -1,0 +1,294 @@
+<script>
+export default {
+  data() {
+    return {
+      date: new Date(),
+      year: null
+    };
+  },
+  mounted() {
+    this.year = this.date.getFullYear()
+  }
+};
+</script>
+
+<template>
+  <footer id="cs-footer-308">
+    <div class="cs-container">
+      <!-- Logo Group -->
+      <div class="cs-logo-group">
+        <router-link aria-label="go back to home" class="cs-logo" to="/" @click="this.scrollToTop()">
+          <img
+            class="cs-logo-img"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="../assets/LOGO.svg"
+            alt="logo"
+            width="178"
+            height="32"
+          />
+        </router-link>
+        <p class="cs-text">
+          Est. 1987 in Toronto, Ontario. Robson, Atony, Delgatto LLP has been serving clients in the local area and across Ontario for more than 30 years. Work with a trusted associate, work with Robson, Atony, Delgatto.
+        </p>
+      </div>
+      <!-- Links -->
+      <ul class="cs-nav">
+        <li class="cs-nav-li">
+          <span class="cs-header">Sitemap</span>
+        </li>
+        <li class="cs-nav-li">
+          <router-link class="cs-nav-link" to="/about" @click="this.scrollToTop()">About</router-link>
+        </li>
+        <li class="cs-nav-li">
+          <router-link class="cs-nav-link" to="/services" @click="this.scrollToTop()">Services</router-link>
+        </li>
+        <li class="cs-nav-li">
+          <router-link class="cs-nav-link" to="/contact" @click="this.scrollToTop()">Contact</router-link>
+        </li>
+      </ul>
+      <ul class="cs-nav">
+        <li class="cs-nav-li">
+          <span class="cs-header">Categories</span>
+        </li>
+        <li class="cs-nav-li">
+          <router-link class="cs-nav-link" to="/realty">Real Estate Law</router-link>
+        </li>
+        <li class="cs-nav-li">
+          <router-link class="cs-nav-link" to="/wills">Wills & Estates</router-link>
+        </li>
+        <li class="cs-nav-li">
+          <router-link class="cs-nav-link" to="/corporate">Corporate Law</router-link>
+        </li>
+      </ul>
+      <!-- Contact Info -->
+      <ul class="cs-nav">
+        <li class="cs-nav-li">
+          <span class="cs-header">Contact</span>
+        </li>
+        <li class="cs-nav-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-stroke.svg"
+            alt="phone"
+            width="24"
+            height="24"
+          />
+          <a class="cs-nav-link cs-phone"
+            >519-555-5544</a
+          >
+        </li>
+        <li class="cs-nav-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/email-stroke.svg"
+            alt="email"
+            width="24"
+            height="24"
+          />
+          <a class="cs-nav-link cs-email"
+            >info@radllp.com</a
+          >
+        </li>
+        <li class="cs-nav-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-stroke.svg"
+            alt="pin"
+            width="24"
+            height="24"
+          />
+          <a
+            class="cs-nav-link cs-address"
+            target="_blank"
+            rel="noopener"
+          >
+            1587 Rockwell Street<br />
+            Toronto, ON M5F 4D5
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="cs-bottom">
+      <span class="cs-copyright"
+        >© Copyright {{ year }} -
+        <router-link class="cs-copyright-link" to="/" @click="this.scrollToTop()">Robson, Atony, Delgatto LLP</router-link></span
+      >
+    </div>
+  </footer>
+</template>
+
+<style scoped>
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cs-footer-308 {
+    padding: var(--sectionPadding);
+    background-color: #1a1a1a;
+    /* Navigation Links */
+  }
+  #cs-footer-308 .cs-container {
+    width: 100%;
+    /* reset on desktop */
+    max-width: 43.75rem;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+  #cs-footer-308 .cs-logo-group {
+    /* takes up all the space, lets the other ul's wrap below it */
+    width: 100%;
+    position: relative;
+  }
+  #cs-footer-308 .cs-logo {
+    width: 11.125rem;
+    height: auto;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  #cs-footer-308 .cs-logo-img {
+    width: 100%;
+    height: auto;
+    background: white;
+    padding: 1rem !important;
+  }
+  #cs-footer-308 .cs-logo-img.dark {
+    display: none;
+  }
+  #cs-footer-308 .cs-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    width: 78%;
+    /* changes to 305px at desktop */
+    max-width: 26.25rem;
+    color: var(--bodyTextColorWhite);
+  }
+  #cs-footer-308 .cs-nav {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #cs-footer-308 .cs-nav-li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #cs-footer-308 .cs-header {
+    font-size: 1rem;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+    display: block;
+  }
+  #cs-footer-308 .cs-nav-link {
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1.5em;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s;
+  }
+  #cs-footer-308 .cs-nav-link:before {
+    /* underline */
+    content: "";
+    width: 0%;
+    height: 0.125rem;
+    background: currentColor;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: -0.125rem;
+    left: 0;
+    transition: width 0.3s;
+  }
+  #cs-footer-308 .cs-nav-link:hover {
+    color: var(--primary);
+  }
+  #cs-footer-308 .cs-nav-link:hover:before {
+    width: 100%;
+  }
+  #cs-footer-308 .cs-icon {
+    width: 1.5rem;
+    height: auto;
+    margin-right: 0.75rem;
+  }
+  #cs-footer-308 .cs-bottom {
+    max-width: 80rem;
+    margin: auto;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #484848;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #cs-footer-308 .cs-copyright,
+  #cs-footer-308 .cs-copyright-link {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColorWhite);
+  }
+  #cs-footer-308 .cs-copyright-link {
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  #cs-footer-308 .cs-copyright-link:hover {
+    color: var(--primary);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cs-footer-308 .cs-container {
+    row-gap: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 2.5rem;
+  }
+  #cs-footer-308 .cs-nav {
+    width: auto;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #cs-footer-308 .cs-container {
+    max-width: 80rem;
+    flex-wrap: nowrap;
+    /* align everything to the right */
+    justify-content: flex-end;
+    column-gap: 5.25rem;
+  }
+  #cs-footer-308 .cs-logo-group {
+    width: 30%;
+    max-width: 24.1875rem;
+    /* pushes away from everything to the right */
+    margin-right: auto;
+  }
+  #cs-footer-308 .cs-text {
+    width: 100%;
+  }
+}
+</style>

@@ -1,0 +1,171 @@
+<script>
+export default {
+  data() {
+    return {};
+  },
+};
+</script>
+
+<template>
+  <div id="stats-316">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Stats/person-gold.svg"
+            alt="icon"
+            width="35"
+            height="40"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-flex-group">
+          <span class="cs-number">50+</span>
+          <span class="cs-desc">Attorneys</span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Stats/group-gold.svg"
+            alt="icon"
+            width="40"
+            height="35"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-flex-group">
+          <span class="cs-number">100,000+</span>
+          <span class="cs-desc">Global Customers</span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Stats/award-gold.svg"
+            alt="icon"
+            width="40"
+            height="40"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-flex-group">
+          <span class="cs-number">12</span>
+          <span class="cs-desc">Winning Awards</span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="https://csimg.nyc3.digitaloceanspaces.com/Stats/check-gold.svg"
+            alt="icon"
+            width="40"
+            height="40"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-flex-group">
+          <span class="cs-number">98%</span>
+          <span class="cs-desc">Success Rate</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<style scoped>
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #stats-316 {
+    padding: var(--sectionPadding);
+    background-color: #1a1a1a;
+  }
+  #stats-316 .cs-card-group {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 37.5em;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  #stats-316 .cs-item {
+    list-style: none;
+    width: 14.6875rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #stats-316 .cs-picture {
+    width: 5rem;
+    height: 5rem;
+    /* 12px - 20px */
+    margin-right: clamp(0.75rem, 3vw, 1.25rem);
+    border-radius: 50%;
+    border: 1px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #stats-316 .cs-icon {
+    width: 2.5rem;
+    height: auto;
+  }
+  #stats-316 .cs-flex-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #stats-316 .cs-number {
+    font-size: var(--headerFontSize);
+    color: var(--bodyTextColorWhite);
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0;
+    display: block;
+  }
+  #stats-316 .cs-desc {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    color: #858585;
+    display: block;
+  }
+}
+/* Tablet - 650px */
+@media only screen and (min-width: 40.625rem) {
+  #stats-316 .cs-card-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 5rem;
+    row-gap: 2rem;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #stats-316 .cs-card-group {
+    max-width: 80rem;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+}
+</style>
